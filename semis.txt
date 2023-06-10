@@ -1,0 +1,19 @@
+CREATE TABLE tblroom_type (
+    room_type_id mediumint(6) UNSIGNED  NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    room_type_name varchar(20),
+    room_type_desc varchar(30),
+    room_type_rental decimal(8,2)
+
+)
+CREATE TABLE tblroom ( room_id smallint(3) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, room_name varchar(10), room_desc varchar(30), room_type mediumint(6) UNSIGNED NULL, INDEX(room_type) )	
+
+
+CREATE TABLE tbltenant( 
+tenant_id MEDIUMINT(7) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+tenant_name VARCHAR(20), 
+gender VARCHAR(1), 
+Date_of_birth DATE, 
+civil_status VARCHAR(10), 
+contact_number VARCHAR(30), 
+room_id SMALLINT(3) UNSIGNED NULL, INDEX(room_id) 
+)

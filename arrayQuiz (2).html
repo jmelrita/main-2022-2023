@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<h2>Click the buttons to sort from lowest to highest and highest to lowest</h2>
+
+
+
+<button onclick="myFunction1()">Sort Lowest to Highest</button>
+<button onclick="myFunction2()">Sort Highest to Lowest</button>
+
+<p id="demo"></p>
+
+<script>
+const points = [75, 102, 14, 55, 125, 10, 8, 11, 19, 24, 66];
+document.getElementById("demo").innerHTML = points;  
+
+
+function myFunction1() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = points;
+}
+
+function myFunction2() {
+  points.sort(function(b, a){return a-b});
+  document.getElementById("demo").innerHTML = points;
+}
+</script>
+
+</body>
+</html>

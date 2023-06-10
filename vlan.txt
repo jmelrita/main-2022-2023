@@ -1,0 +1,35 @@
+enable
+conf t
+vlan 10
+name Student
+vlan 20
+name Faculty
+vlan 30
+name Staff
+
+
+int fa0/1
+switchport mode acess
+switchport access vlan 20
+int fa0/2
+switchport mode acess
+switchport access vlan 20
+
+int fa0/3
+switchport mode acess
+switchport access vlan 10
+int fa0/4
+switchport mode acess
+switchport access vlan 10
+
+int fa0/5
+switchport mode acess
+switchport access vlan 10
+int fa0/6
+switchport mode acess
+switchport access vlan 10
+
+exit
+exit
+
+show vlan

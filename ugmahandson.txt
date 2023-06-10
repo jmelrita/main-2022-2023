@@ -1,0 +1,45 @@
+vlan 2
+name PSYCH
+vlan 4
+name ENGLISH
+vlan 8 
+name MATH
+
+int fa0/1
+switchport mode access
+switchport access vlan 2
+int fa0/2
+switchport mode access
+switch[prt access vlan 4
+int fa0/3
+switchport mode access
+switchport access vlan 8
+
+| SWITCH - TRUNK |
+
+int gigabitEthernet 0/1
+switchport mode trunk
+no shut
+copy run start
+
+| ROUTER |
+int gigabitethernet 0/0
+no shut
+
+int gigabitEthernet 0/0.2
+encapsulation dot1Q 2
+ip address |192.168.10.1 255.255.255.0
+
+
+
+| LOGIN |
+enable
+conf t
+hostname_____ 
+line console 0
+password _____
+login
+line vty 0 14
+enable secret___
+service password encryption
+exit

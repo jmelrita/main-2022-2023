@@ -1,0 +1,23 @@
+SELECT * FROM tblsupplier
+
+SELECT supplier_id,supplier_name,supplier_address
+From tblsupplier;
+
+SELECT supplier_name,contact_person
+FROM tblsupplier
+WHERE supplier_name='Ms.Carmen Yap';
+
+SELECT supplier_name,supplier_address
+FROM tblsupplier
+WHERE supplier_address='Subangdaku, Mandaue City,Cebu';
+
+SELECT * FROM tblproduct
+
+SELECT product_id,product_name,selling_price
+FROM tblproduct
+
+SELECT MAX(selling_price) AS most_expensive,product_id,product_name 
+FROM tblproduct;
+
+SELECT MIN(selling_price) AS most_expensive,product_id,product_name 
+FROM tblproduct;

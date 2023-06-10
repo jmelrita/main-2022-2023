@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="var"></input>
+<button onclick="myF()">TRY</button>
+
+
+<p id="demo"></p>
+
+<script>
+function myF(){
+    var text=document.getElementById("var").value;
+     var result = text.toUpperCase();
+    
+    document.getElementById("demo").innerHTML = result;
+}
+
+</script>
+
+</body>
+</html>
